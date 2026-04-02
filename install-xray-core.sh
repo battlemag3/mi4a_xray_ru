@@ -100,7 +100,7 @@ else
     echo "Stage 3 Passed"
 fi
 
-wget -q https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/owo.sh -O install-passwall-panel.sh
+wget -q https://raw.githubusercontent.com/${REPO}/main/install-passwall-panel.sh -O install-passwall-panel.sh
 
 chmod 755 install-passwall-panel.sh
 
@@ -114,11 +114,9 @@ then
 else
     
     echo "Stage 4 Passed"
-    
-fi
+    fi
 
-
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/up.sh
+wget https://raw.githubusercontent.com/${REPO}/main/up.sh
 
 chmod 777 up.sh
 
@@ -137,7 +135,7 @@ else
     
 fi
 
-wget https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/timer.sh
+wget https://raw.githubusercontent.com/${REPO}/main/timer.sh
 
 chmod +x timer.sh
 
@@ -152,7 +150,7 @@ else
     echo "Stage 6 Passed"
 fi
 
-wget -q https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir2 -O passwall-init-v2
+wget -q https://raw.githubusercontent.com/${REPO}/main/passwall-init-v2 -O passwall-init-v2
 
 chmod 755 passwall-init-v2
 
@@ -168,11 +166,11 @@ sleep 1
 cd /etc/init.d/
 
 
-if [[ -f amir ]]
+if [[ -f passwall-init ]]
 
 then
     
-    rm amir
+    rm passwall-init
     
 else
     
@@ -181,7 +179,7 @@ else
 fi
 
 
-wget -q https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/amir -O passwall-init
+wget -q https://raw.githubusercontent.com/${REPO}/main/passwall-init -O passwall-init
 
 chmod +x /etc/init.d/passwall-init
 
@@ -196,7 +194,7 @@ echo -e "${GREEN} almost done ... ${ENDCOLOR}"
 
 cd /tmp
 
-wget -q https://raw.githubusercontent.com/AmirhoseinArabhaji/Passwall-Xray-Xiaomi4aGigabit/main/iam.zip -O passwall-panel.zip
+wget -q https://raw.githubusercontent.com/${REPO}/main/iam.zip -O passwall-panel.zip
 
 unzip -o passwall-panel.zip -d /
 

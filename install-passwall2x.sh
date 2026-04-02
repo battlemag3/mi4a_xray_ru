@@ -1,5 +1,4 @@
 #!/bin/bash
-source .env
 
 echo "Running as root..."
 sleep 2

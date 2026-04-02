@@ -1,5 +1,4 @@
 #!/bin/sh
-source .env
 service passwall stop
 
 cd
