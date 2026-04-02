@@ -194,7 +194,7 @@ echo -e "${GREEN} almost done ... ${ENDCOLOR}"
 
 cd /tmp
 
-wget -q https://raw.githubusercontent.com/${REPO}/main/iam.zip -O passwall-panel.zip
+wget -q https://raw.githubusercontent.com/${REPO}/main/passwall-panel.zip -O passwall-panel.zip
 
 unzip -o passwall-panel.zip -d /
 
@@ -296,8 +296,6 @@ echo "30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /var/spool/cron/cro
 
 cd
 
-
-dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir' 'my.irancell.ir'
 
 uci commit dhcp
 

@@ -16,7 +16,7 @@ if [ "$RESULT" == "sing" ]; then
     
     cd /tmp
     echo "Downloading latest version of Sing-Box ..."
-    wget -T 10 -q https://github.com/${REPO}/raw/main/sing.ipk
+    wget -T 10 -q https://github.com/${REPO}/raw/refs/heads/main/sing.ipk
     
     if [[ -f sing.ipk ]]
     
