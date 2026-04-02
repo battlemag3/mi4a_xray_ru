@@ -16,7 +16,7 @@ if [ "$RESULT" == "sing" ]; then
     
     cd /tmp
     echo "Downloading latest version of Sing-Box ..."
-    wget -q https://github.com/${REPO}/raw/main/sing.ipk
+    wget -T 10 -q https://github.com/${REPO}/raw/main/sing.ipk
     
     if [[ -f sing.ipk ]]
     
@@ -55,7 +55,7 @@ if [ "$RESULT" == "sing" ]; then
     
     cd /tmp
     
-    wget -q https://raw.githubusercontent.com/${REPO}/main/iam.zip -O /tmp/passwall-panel.zip
+    wget -T 10 -q https://raw.githubusercontent.com/${REPO}/main/iam.zip -O /tmp/passwall-panel.zip
     
     unzip -o /tmp/passwall-panel.zip -d /
     
@@ -79,7 +79,7 @@ fi
 
 cd /tmp
 echo "Downloading latest version of Xray-core ..."
-wget -q https://raw.githubusercontent.com/${REPO}/main/panel.ipk -O /tmp/panel.ipk
+wget -T 10 -q https://raw.githubusercontent.com/${REPO}/main/panel.ipk -O /tmp/panel.ipk
 
 if [[ -f /tmp/panel.ipk ]]
 
@@ -118,7 +118,7 @@ cd /root/
 
 cd /tmp
 
-wget -q https://raw.githubusercontent.com/${REPO}/main/pass.ipk -O /tmp/pass.ipk
+wget -T 10 -q https://raw.githubusercontent.com/${REPO}/main/pass.ipk -O /tmp/pass.ipk
 
 opkg install /tmp/pass.ipk -d ram || true
 
